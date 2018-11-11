@@ -56,14 +56,18 @@
     text-decoration: none;
     display: block;
 }
-.secondNav .search-container {
-  text-align: center;
+.secondNav .search-container{
+	text-align: center;
+}
+
+.secondNav .search-container form{
+	display: inline;
 }
 
 .secondNav input[type=text] {
-  padding: 7px 500px 7px 7px;
-  font-size: 17px;
-  border: normal;
+	padding: 7px 500px 7px 7px;
+	font-size: 17px;
+	border: normal;
 }
 
 .secondNav .dropdown-content a:hover {background-color: #ddd;}
@@ -71,20 +75,20 @@
 .secondNav .dropdown:hover .dropdown-content {display: block;}
 
 .secondNav .search-container .searchbtn {
-  background: #ed6f09;
-  font-size: 16px;
-  border: none;
-  text-align: center;
-  display: inline-block;
-  padding: 10px 25px;
-  cursor: pointer;
+	background: #ed6f09;
+	font-size: 16px;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	padding: 10px 25px;
+	cursor: pointer;
 }
 
 .secondNav .search-container .searchbtn:hover {
-  background: #c65800;
+	background: #c65800;
 }
 
-.secondNav .search-container .cartbtn {
+.secondNav .cartbtn {
 	text-align: center;
 	background: #ed6f09;
 	font-size: 16px;
@@ -94,7 +98,7 @@
 	cursor: pointer;
 }
 
-.secondNav .search-container .cartbtn:hover {
+.secondNav .cartbtn:hover {
 	background: #c65800;
 }
 

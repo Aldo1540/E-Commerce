@@ -1,14 +1,16 @@
 <header>
 		<div class="topNav">
 			<form name="form1" method="post" action="index.php">
-				<input type="image" src="images/logo.png" name="Submit" />
-				<button class="button">Language</button>
+				<input type="image" src="images/logo.png" name="Submit"/>
+			</form>
+			<button class="button">Language</button>
+			<form method="post" action="signin.php">
 				<button class="button">Sign In</button>
 			</form>
 		</div>
 		<div class="secondNav">
 			<div class="search-container">
-				<form action="index.php">
+				<form action="itemsearch.php">
 					<div class="dropdown">
 						<button class="searchbtn">Category</button>
 						<div class="dropdown-content">
@@ -21,6 +23,8 @@
 					</div>
 					<input name="search" type="text" placeholder="Search">
 					<button class="searchbtn" type="submit">Submit</button>
+				</form>
+				<form method="post" action="cart.php">
 					<button class="cartbtn">Cart</button>
 				</form>
 			</div>
