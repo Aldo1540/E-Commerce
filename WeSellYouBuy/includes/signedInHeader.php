@@ -1,11 +1,4 @@
-<<!DOCTYPE html>
-<html>
-<head>
-	<title>We Sell You Buy</title>
-	<link rel="stylesheet" type="text/css" href="style/core.css">
-</head>
-<body>
-	<header>
+<header>
 		<div class="topNav">
 			<form name="form1" method="post" action="index.php">
 				<input type="image" src="images/logo.png" name="Submit" />
@@ -33,4 +26,4 @@
 			</div>
 		</div>
 		<hr>
-	</header>
+	</header>	
