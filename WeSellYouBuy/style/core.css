@@ -1,3 +1,5 @@
+/*Core css styling sheet*/
+
 *{
 	margin: 0;
 	padding: 0;
@@ -83,7 +85,7 @@
 }
 
 .secondNav .search-container .cartbtn {
-	float: right;
+	text-align: center;
 	background: #ed6f09;
 	font-size: 16px;
 	border: none;
@@ -98,6 +100,7 @@
 
 /*--------------------------Advertisments Section--------------------------------*/
 .advertisments{
+	overflow: hidden;
 	background-color: white;
 }
 
@@ -109,7 +112,7 @@
 /*--------------------------Content Section--------------------------------*/
 .content{
 	display: table;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 .contentImgs li{
