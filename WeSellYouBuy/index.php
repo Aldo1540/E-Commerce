@@ -6,8 +6,8 @@
 </head>
 <body>
 
-	<?php include 'includes/signedOutHeader.php'; ?>
-	
+	<?php include 'includes/header.php'; ?>
+
 	<div class="advertisments">
 		<img src="images/sale/add.png" class="center">
 	</div>
@@ -26,7 +26,7 @@
 				<li><input type="image" src="images/items/blender.png" name="Submit"/></li>
 				<li><input type="image" src="images/items/babybed.png" name="Submit"/></li>
 				<li><input type="image" src="images/items/lawnmower.png" name="Submit"/></li>
-			</ul>	
+			</ul>
 		</form>
 	</div>
 
