@@ -6,22 +6,50 @@
 	<link rel="stylesheet" type="text/css" href="style/itemsearch.css">
 </head>
 <body>
-	<?php include 'includes/signedOutHeader.php'; ?>
+	<?php include 'includes/signedOutHeader.php'; 
+		$servername = "localhost";
+		$dbUsername = "root";
+		$dbPassword = "";
+		$dbName = "shoppingcart";
+
+		/* sets up a variable for the connection using given credentials */
+		$conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
+
+		/* checks if connection failed, if it did, display error message */
+		if(!$conn){
+		die("Connection failed: ".mysqli_connect_error());
+	}
+	?>
 	
 	<div class="searchresults">
-		<label>results for "test"</label>
 		<form method="post" action="itempage.php">
 			<ul>
-				<li><input type="image" src="images/items/chair.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/grill.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/speaker.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/table.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/multitool.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/towels.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/shirt.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/blender.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/babybed.png" name="Submit"/>Product info</li>
-				<li><input type="image" src="images/items/lawnmower.png" name="Submit"/>Product info</li>
+			
+			<table class="table">
+			<tr>
+	  		<td>Item Name</th>
+	  		<td>Quanity</th>
+	  		<td>Price</th>
+			</tr>
+				<?php
+			$total = 0;
+			$i = 0;	
+			
+			$item = mysqli_query($conn,"SELECT * FROM products");
+			while($row = mysqli_fetch_array($item))
+			{
+				$itemName = $row['name'];
+				echo "<tr>";
+				echo "<td><li><input type=\"image\" src=\"images/items/" . $itemName . ".png\" name=\"Submit\"/></li></td>";
+				echo "<td>" . $row['name'] . "</td>";
+				echo "<td>" . $row['price'] . "</td>";
+				echo "<td><button class=\"btnPurchase\">purchase</button></td>";
+				echo "</tr>";
+			}
+				echo "</table>";
+				?>
+				</tr>
+				</table>
 			</ul>	
 		</form>
 	</div>

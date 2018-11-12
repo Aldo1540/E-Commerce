@@ -20,9 +20,7 @@
 	if(!$conn){
 	die("Connection failed: ".mysqli_connect_error());
 	}
-	
-	$sql = "SELECT * FROM products";
-	$res = mysqli_query($conn, $sql);
+
 	?>
 	
 	<h1>WeSellYouBuy<h1>
@@ -33,24 +31,11 @@
 	<div class="row">
 	  <table class="table">
 	  	<tr>
-	  		<th>Item Name</th>
-	  		<th>Quanity</th>
-	  		<th>Price</th>
+	  		<td>Item Name</th>
+	  		<td>Quanity</th>
+	  		<td>Price</th>
 	  	</tr>
 		
-		
-		<?php
-
-			$cartitems = array();
-			$sql = "SELECT * FROM cart";
-			$result = mysqli_query($conn, $sql);
-			if($result){
-				while($row = mysqli_fetch_assoc($result)){
-					$cartitems[] = $row["name"];
-				}
-			}
-			
-		?>
 		
 		<?php
 			$total = 0;
@@ -60,7 +45,9 @@
 			while($row = mysqli_fetch_array($item))
 			{
 				$totalprice = $row['quantity'] * $row['price'];
+				$itemName = $row['name'];
 				echo "<tr>";
+				echo "<td><li><input type=\"image\" src=\"images/items/" . $itemName . ".png\" name=\"Submit\"/></li></td>";
 				echo "<td>" . $row['name'] . "</td>";
 				echo "<td>" . $row['quantity'] . "</td>";
 				echo "<td>" . $totalprice . "</td>";
@@ -73,12 +60,14 @@
 		<tr>
 			<td><strong>Total Price</strong></td>
 			<td><strong><?php echo $total;?></strong></td>
-			<td><a href="#" class="btn btn-info">Checkout</a></td>
+			<button class="btnCheckout">Checkout</button>
 		</tr>
 	  </table>
 	</div>
 </div>
  
 </body>
-
+<footer>
+	<p></p>
+	</footer>
 </html>
