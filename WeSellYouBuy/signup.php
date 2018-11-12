@@ -22,11 +22,8 @@
     <option value="Outdoor">Outdoor Appliances</option>
     <option value="Baby">Baby</option>
   </select><br />
-
-  <input class="signUpbtn" type="submit" name="signup-submit" value="Submit">
-</form><br>
-
-or
+  <input type="submit" name="signup-submit" value="Submit">
+</form><br />
 
 <form method="post" action="signin.php">
   <button class="signInBtn">Sign In</button>
