@@ -8,10 +8,11 @@
 <body>
 <?php include 'includes/signedOutHeader.php'; ?>
 <div class="signUp">
+<img src="images/logo2.png" style="width:10%;">
 <h1>Sign Up </h1>
 <form class="signupForm" method="post" action="includes/signup.inc.php" >
-  <input type="text" name="Username" placeholder="Username"> <br />
-  <input type="password" name="Password" placeholder="Password"><br />
+  <input type="text" name="Username" placeholder="Username"> <br>
+  <input type="password" name="Password" placeholder="Password"><br>
   <input type="text" name="Email" placeholder="Email"><br />
 
   <select name="What do you shop for most?">
@@ -22,8 +23,15 @@
     <option value="Baby">Baby</option>
   </select><br />
 
-  <input type="submit" name="signup-submit" value="Submit">
+  <input class="signUpbtn" type="submit" name="signup-submit" value="Submit">
+</form><br>
+
+or
+
+<form method="post" action="signin.php">
+  <button class="signInBtn">Sign In</button>
 </form>
+
 </div>
 
 </body>

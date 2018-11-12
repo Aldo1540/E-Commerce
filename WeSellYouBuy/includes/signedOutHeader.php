@@ -4,7 +4,7 @@
 				<input type="image" src="images/logo.png" name="Submit"/>
 			</form>
 			<button class="button">Language</button>
-			<form method="post" action="signin.php">
+			<form method="post" action="signup.php">
 				<button class="button">Sign In</button>
 			</form>
 		</div>
