@@ -5,9 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style/core.css">
 	<link rel="stylesheet" type="text/css" href="style/cart.css">
 </head>
-	<?php include 'includes/signedOutHeader.php'; 
-
-?>
+	<?php include 'includes/signedOutHeader.php'; ?>
 	<h1>WeSellYouBuy<h1>
 	<header id="title">
       <h1>My Shopping Cart</h1>
@@ -48,5 +46,6 @@
 	<button type="button">Remove All</button> 
 	<button type="button">Purchase</button> 
 	<label> Price: $179.97</label>
+	</body>
 
 </html>
