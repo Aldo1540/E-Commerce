@@ -1,0 +1,58 @@
+/*Sign up css styling sheet*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.signUp {
+	margin: 100px auto;
+	padding: 20px 0px;
+	text-align: center;
+	background-color: #cccccc;
+}
+
+.signUp input[type=text] {
+	margin-top: 20px;
+	padding: 7px 200px 7px 7px;
+	font-size: 17px;
+	border: normal;
+}
+
+.signUp input[type=password] {
+	margin-top: 20px;
+	padding: 7px 200px 7px 7px;
+	font-size: 17px;
+	border: normal;
+}
+
+.signUp .signUpbtn {
+	background: #ed6f09;
+	margin-top: 20px;
+	font-size: 16px;
+	border: none;
+	padding: 10px 25px;
+	cursor: pointer;
+}
+
+.signUp select {
+	margin-top: 20px;
+	padding: 7px 100px 7px 7px;
+}
+
+.signUp .signUpbtn:hover {
+	background: #c65800;
+}
+
+.signUp .signInBtn {
+	background: #ed6f09;
+	margin-top: 10px;
+	font-size: 16px;
+	border: none;
+	padding: 10px 25px;
+	cursor: pointer;
+}
+
+.signUp .signInBtn:hover {
+	background: #c65800;
+}
