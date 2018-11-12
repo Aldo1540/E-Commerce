@@ -7,16 +7,18 @@
 </head>
 <body>
 	<?php include 'includes/signedOutHeader.php'; ?>
-	<h1>SIGN-IN PAGE<h1>
-	
-	<div  align="center">
-	<p>Login</p>
-	 <form action="/action_page.php">
-	Email:<input type="text" name="UEmail"><br>
-	Password: <input type="text" name="UPassword"><br>
-	<button type="button">Log in</button> 
-	<button type="button">sign up</button> 
+	<div class="logIn">
+											<h1>Sign in </h1>
+											<form method="post" action="includes/login.inc.php">
+													<input type="text" name="Username" placeholder="Username"> <br />
+													<input type="password" name="Password" placeholder="Password"><br />
+
+													<input type="submit" name="login-submit" value="Submit">
+											</form>
 	</div>
-	
+	<!-- log in form in html to take a username and a password,
+			 checks for $_SERVER["PHP _SELF"] expoits on data entry,
+			 form submits  login information
+	-->
 </body>
 </html>
