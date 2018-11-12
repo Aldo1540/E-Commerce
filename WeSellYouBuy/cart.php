@@ -6,44 +6,78 @@
 	<link rel="stylesheet" type="text/css" href="style/cart.css">
 </head>
 <body>
-	<?php include 'includes/signedOutHeader.php'; ?>
+	<?php include 'includes/signedOutHeader.php';
+		  
+	$servername = "localhost";
+	$dbUsername = "root";
+	$dbPassword = "";
+	$dbName = "shoppingcart";
+
+	/* sets up a variable for the connection using given credentials */
+	$conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
+
+	/* checks if connection failed, if it did, display error message */
+	if(!$conn){
+	die("Connection failed: ".mysqli_connect_error());
+	}
+	
+	$sql = "SELECT * FROM products";
+	$res = mysqli_query($conn, $sql);
+	?>
+	
 	<h1>WeSellYouBuy<h1>
 	<header id="title">
     <h1>My Shopping Cart</h1>
 	
-	<div>
-		<table class="centertbl" style="width:40%">
-			<tr>
-				<th>Image</th>
-				<th>Product</th>
-				<th>Quantity</th>
-				<th>Price</th>
-			</tr>
-			<tr>
-				<td><li><img src="images/items/blender.png" style="width:30%"; "height:30%";></li></td>
-				<td>Blender</td>
-				<td>1</td>
-				<td>19.99</td>
-			</tr>
-			<tr>
-				<td><li><img src="images/items/shirt.png" style="width:30%"; "height:30%";></li></td>
-				<td>Shirt</td>
-				<td>1</td>
-				<td>9.99</td>
-			</tr>
-			<tr>
-				<td><li><img src="images/items/grill.png" style="width:30%"; "height:30%";></li></td>
-				<td>grill</td>
-				<td>1</td>
-				<td>149.99</td>
-			</tr>
-		</table>
+	<div class="container">
+	<div class="row">
+	  <table class="table">
+	  	<tr>
+	  		<th>Item Name</th>
+	  		<th>Quanity</th>
+	  		<th>Price</th>
+	  	</tr>
 		
-		<button type="button">Remove</button> 
-		<button type="button">Remove All</button> 
-		<button type="button">Purchase</button> 
-		<label> Price: $179.97</label>
+		
+		<?php
+
+			$cartitems = array();
+			$sql = "SELECT * FROM cart";
+			$result = mysqli_query($conn, $sql);
+			if($result){
+				while($row = mysqli_fetch_assoc($result)){
+					$cartitems[] = $row["name"];
+				}
+			}
+			
+		?>
+		
+		<?php
+			$total = 0;
+			$i = 0;	
+			
+			$item = mysqli_query($conn,"SELECT * FROM cart");
+			while($row = mysqli_fetch_array($item))
+			{
+				echo "<tr>";
+				echo "<td>" . $row['name'] . "</td>";
+				echo "<td>" . $row['quantity'] . "</td>";
+				echo "<td>" . $row['price'] . "</td>";
+				echo "</tr>";
+				$total = $total + $row['price'];
+			}
+		echo "</table>";
+		?>
+		
+		<tr>
+			<td><strong>Total Price</strong></td>
+			<td><strong><?php echo $total;?></strong></td>
+			<td><a href="#" class="btn btn-info">Checkout</a></td>
+		</tr>
+	  </table>
 	</div>
+</div>
+ 
 </body>
 
 </html>
