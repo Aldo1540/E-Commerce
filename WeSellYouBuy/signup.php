@@ -23,6 +23,10 @@
   </select><br />
 
   <input type="submit" name="signup-submit" value="Submit">
+</form><br />
+
+<form method="post" action="signin.php">
+  <button class="signInBtn">Sign In</button>
 </form>
 </div>
 
