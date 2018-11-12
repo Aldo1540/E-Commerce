@@ -59,10 +59,11 @@
 			$item = mysqli_query($conn,"SELECT * FROM cart");
 			while($row = mysqli_fetch_array($item))
 			{
+				$totalprice = $row['quantity'] * $row['price'];
 				echo "<tr>";
 				echo "<td>" . $row['name'] . "</td>";
 				echo "<td>" . $row['quantity'] . "</td>";
-				echo "<td>" . $row['price'] . "</td>";
+				echo "<td>" . $totalprice . "</td>";
 				echo "</tr>";
 				$total = $total + $row['price'];
 			}
