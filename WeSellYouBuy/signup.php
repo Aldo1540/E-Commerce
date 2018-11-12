@@ -23,7 +23,7 @@
     <option value="Baby">Baby</option>
   </select><br />
   <input type="submit" name="signup-submit" value="Submit">
-</form><br />
+</form><br/>
 
 <form method="post" action="signin.php">
   <button class="signInBtn">Sign In</button>
