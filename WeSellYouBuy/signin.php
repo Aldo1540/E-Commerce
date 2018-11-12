@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style/signin.css">
 </head>
 <body>
-	<?php include 'includes/signedOutHeader.php'; ?>
+	<?php include 'includes/header.php'; ?>
 	<div class="logIn">
 	<img src="images/logo2.png" style="width:10%;">
 	<h1>Sign in</h1>

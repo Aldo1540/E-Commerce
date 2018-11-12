@@ -6,8 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="style/cart.css">
 </head>
 <body>
-	<?php include 'includes/signedOutHeader.php';
-		  
+	<?php include 'includes/header.php';
+
 	$servername = "localhost";
 	$dbUsername = "root";
 	$dbPassword = "";
@@ -22,11 +22,11 @@
 	}
 
 	?>
-	
+
 	<h1>WeSellYouBuy<h1>
 	<header id="title">
     <h1>My Shopping Cart</h1>
-	
+
 	<div class="container">
 	<div class="row">
 	  <table class="table">
@@ -35,12 +35,12 @@
 	  		<td>Quanity</th>
 	  		<td>Price</th>
 	  	</tr>
-		
-		
+
+
 		<?php
 			$total = 0;
-			$i = 0;	
-			
+			$i = 0;
+
 			$item = mysqli_query($conn,"SELECT * FROM cart");
 			while($row = mysqli_fetch_array($item))
 			{
@@ -56,7 +56,7 @@
 			}
 		echo "</table>";
 		?>
-		
+
 		<tr>
 			<td><strong>Total Price</strong></td>
 			<td><strong><?php echo $total;?></strong></td>
@@ -65,7 +65,7 @@
 	  </table>
 	</div>
 </div>
- 
+
 </body>
 <footer>
 	<p></p>

@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style/itemsearch.css">
 </head>
 <body>
-	<?php include 'includes/signedOutHeader.php'; 
+	<?php include 'includes/header.php';
 		$servername = "localhost";
 		$dbUsername = "root";
 		$dbPassword = "";
@@ -20,11 +20,11 @@
 		die("Connection failed: ".mysqli_connect_error());
 	}
 	?>
-	
+
 	<div class="searchresults">
 		<form method="post" action="itempage.php">
 			<ul>
-			
+
 			<table class="table">
 			<tr>
 	  		<td>Item Name</th>
@@ -33,8 +33,8 @@
 			</tr>
 				<?php
 			$total = 0;
-			$i = 0;	
-			
+			$i = 0;
+
 			$item = mysqli_query($conn,"SELECT * FROM products");
 			while($row = mysqli_fetch_array($item))
 			{
@@ -50,13 +50,13 @@
 				?>
 				</tr>
 				</table>
-			</ul>	
+			</ul>
 		</form>
 	</div>
-	
+
 	<footer>
 	<p>Footer</p>
 	</footer>
-	
+
 </body>
 </html>
