@@ -1,6 +1,8 @@
 /*Item search css styling sheet*/
 
-*{
-	margin: 0;
-	padding: 0;
+.searchresults li{
+	display: table;
+	margin: 10px auto;
+	border: 1px solid black;
 }
+

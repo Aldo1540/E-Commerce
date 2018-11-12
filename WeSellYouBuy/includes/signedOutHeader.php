@@ -1,4 +1,4 @@
-<header>
+	<header>
 		<div class="topNav">
 			<form name="form1" method="post" action="index.php">
 				<input type="image" src="images/logo.png" name="Submit"/>
@@ -25,7 +25,7 @@
 					<button class="searchbtn" type="submit">Submit</button>
 				</form>
 				<form method="post" action="cart.php">
-					<button class="cartbtn">Cart</button>
+					<button class="cartbtn">My Cart</button>
 				</form>
 			</div>
 		</div>

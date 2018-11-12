@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>We Sell You Buy</title>
@@ -12,20 +12,22 @@
 		<img src="images/sale/add.png" class="center">
 	</div>
 	<div class="content">
-		<ul class="contentImgs">
-			<li><img src="images/items/chair.png"></li>
-			<li><img src="images/items/grill.png"></li>
-			<li><img src="images/items/speaker.png"></li>
-			<li><img src="images/items/table.png"></li>
-			<li><img src="images/items/multitool.png"></li>
-		</ul>
-		<ul class="contentImgs">
-			<li><img src="images/items/towels.png"></li>
-			<li><img src="images/items/shirt.png"></li>
-			<li><img src="images/items/blender.png"></li>
-			<li><img src="images/items/babybed.png"></li>
-			<li><img src="images/items/lawnmower.png"></li>
-		</ul>	
+		<form method="post" action="itempage.php">
+			<ul class="contentImgs">
+				<li><input type="image" src="images/items/chair.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/grill.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/speaker.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/table.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/multitool.png" name="Submit"/></li>
+			</ul>
+			<ul class="contentImgs">
+				<li><input type="image" src="images/items/towels.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/shirt.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/blender.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/babybed.png" name="Submit"/></li>
+				<li><input type="image" src="images/items/lawnmower.png" name="Submit"/></li>
+			</ul>	
+		</form>
 	</div>
 
 	<footer>
